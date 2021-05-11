@@ -1,50 +1,63 @@
 <template>
   <div class="navbar-contenedor">
-    
-     <div class="logo">
-           <h1>Bohify</h1>
-      </div>
-    
-    <nav>
-         <a href="#">Premium</a>
-         <a href="#">Support</a>
-         <a href="#">Download</a>
-         <a href="#">Sing up</a>
-         <a href="#">Log in</a>
-    </nav>
+    <div class="container">
+      <div class="logo">Bohify</div>
+
+      <nav class="barra-de-navegacion">
+        <a class="navbar-link" href="#">Sing up</a>
+        <a class="navbar-link" href="#">Log in</a>
+      </nav>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-export default Vue.extend({
-
-})
+import Vue from "vue";
+export default Vue.extend({});
 </script>
 
 <style lang="scss">
-.navbar-contenedor{
-    background-color: black;
+.navbar-contenedor {
+  background-color: black;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
     font-size: 1.6rem;
-    height: 100px;
+    height: 85px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 2rem;
+  }
+  .logo {
+    color: #fff;
+    font-size: 2rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar-link:hover {
+    color: yellowgreen;
+  }
+
+  .barra-de-navegacion {
+    display: flex;
     gap: 30px;
-
-    .logo{
-
-        h1{
-            color: #fff;
-            margin: auto;
-            font-size: 2rem;
-        }
-    }
-    a{
-        text-decoration: none;
-        color: #fff;
-    }
+  }
 }
 
+@media (max-width: 800px) {
+  .navbar-contenedor {
+    .container {
+      font-size: 1rem;
+      .logo {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
 </style>
