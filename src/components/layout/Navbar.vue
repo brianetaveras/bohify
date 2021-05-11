@@ -1,7 +1,9 @@
 <template>
   <div class="navbar-contenedor">
     <div class="container">
-      <div class="logo">Bohify</div>
+      <div class="logo">
+        <a href="/">Bohify</a>
+      </div>
 
       <nav class="barra-de-navegacion">
         <a class="navbar-link" href="#">Sing up</a>
