@@ -46,7 +46,7 @@ export default Vue.extend({});
 
   .barra-de-navegacion {
     display: flex;
-    gap: 30px;
+    gap: 40px;
   }
 }
 
