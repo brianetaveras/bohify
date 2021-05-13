@@ -8,33 +8,49 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+  }
+  ,
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
+  }
+  ,
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Signin.vue')
+  }
+  ,
+  {
+    path: '/app',
+    name: 'App',
+    component: () => import(/* webpackChunkName: "about" */ '../views/App.vue')
   },
   {
-    path: '/about',
+    path: '/app/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
   ,
   {
-    path: '/playlist/:id',
-    name: 'playlist',
+    path: '/app/playlist/:id',
+    name: 'Playlist',
     component: () => import(/* webpackChunkName: "about" */ '../views/ListOfPlaylist.vue')
   }
   ,
   {
-    path: '/search',
-    name: 'search',
+    path: '/app/search',
+    name: 'Search',
     component: () => import(/* webpackChunkName: "about" */ '../views/serach.vue')
   }
   ,
   {
-    path: '/playlists',
+    path: '/app/playlists',
     name: 'PlaylistPage',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Playlists.vue')
   }
+  
 
 ]
 
