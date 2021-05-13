@@ -33,12 +33,13 @@ export default Vue.extend({});
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     box-sizing: border-box;
     padding: 2rem;
+    text-decoration: none;
   }
   .logo {
     color: #fff;
     font-size: 2rem;
   }
-  a {
+  navbar-link {
     text-decoration: none;
     color: #fff;
   }
