@@ -7,25 +7,25 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue')
   }
   ,
   {
     path: '/signup',
     name: 'Signup',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
+    component: () => import(/* webpackChunkName: "Signup" */ '../views/Signup.vue')
   }
   ,
   {
     path: '/signin',
     name: 'Signin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Signin.vue')
+    component: () => import(/* webpackChunkName: "Signin" */ '../views/Signin.vue')
   }
   ,
   {
     path: '/app',
     name: 'App',
-    component: () => import(/* webpackChunkName: "about" */ '../views/App.vue')
+    component: () => import(/* webpackChunkName: "App" */ '../views/App.vue')
   },
   {
     path: '/app/about',
@@ -36,19 +36,19 @@ const routes: Array<RouteConfig> = [
   {
     path: '/app/playlist/:id',
     name: 'Playlist',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ListOfPlaylist.vue')
+    component: () => import(/* webpackChunkName: "Playlist" */ '../views/ListOfPlaylist.vue')
   }
   ,
   {
     path: '/app/search',
     name: 'Search',
-    component: () => import(/* webpackChunkName: "about" */ '../views/serach.vue')
+    component: () => import(/* webpackChunkName: "Search" */ '../views/serach.vue')
   }
   ,
   {
     path: '/app/playlists',
     name: 'PlaylistPage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Playlists.vue')
+    component: () => import(/* webpackChunkName: "PlaylistPage" */ '../views/Playlists.vue')
   }
   
 
