@@ -1,8 +1,16 @@
 <template>
-    <div>
+    <footer class="player">
         <h1>{{ name }}</h1>
-    </div>
+    </footer>
 </template>
+<style scoped>
+    .player{
+        position: absolute;
+        width: 99%;
+        background-color: #181818;
+        color: #fff;
+    }
+</style>
 
 <script lang="ts">
     import Vue from 'vue'
