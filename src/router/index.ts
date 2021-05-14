@@ -30,7 +30,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/app/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "About" */ '../views/About.vue')
   }
   ,
   {
@@ -42,7 +42,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/app/search',
     name: 'Search',
-    component: () => import(/* webpackChunkName: "Search" */ '../views/serach.vue')
+    component: () => import(/* webpackChunkName: "Search" */ '../views/Search.vue')
   }
   ,
   {
