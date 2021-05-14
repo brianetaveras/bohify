@@ -50,6 +50,12 @@ const routes: Array<RouteConfig> = [
     name: 'PlaylistPage',
     component: () => import(/* webpackChunkName: "PlaylistPage" */ '../views/Playlists.vue')
   }
+  ,
+  {
+    path: '*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "NotFound" */ '../views/NotFound.vue')
+  }
   
 
 ]
