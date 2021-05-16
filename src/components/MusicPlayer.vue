@@ -6,7 +6,9 @@
 <style scoped>
     .player{
         position: absolute;
-        width: 99%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
         background-color: #181818;
         color: #fff;
     }
@@ -18,6 +20,7 @@
         data(){
             return {
                 name: "David",
+                lastName: "Mora Montero"
             }
         }
     })
