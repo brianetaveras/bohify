@@ -5,10 +5,9 @@
       <router-link to="/about">About</router-link> -->
       <Navbar />
     </div>
-    <router-view />
-    <Footer/>
+    <div class="router-view"><router-view /></div>
+    <Footer />
   </div>
-
 </template>
 
 <script lang="ts">
@@ -24,7 +23,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+
+.router-view{
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
 body {
   margin: 0;
+}
+.decoration {
+  text-decoration: none;
 }
 </style>

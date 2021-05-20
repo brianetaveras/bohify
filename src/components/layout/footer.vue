@@ -1,9 +1,8 @@
 <template>
   <div class="footer-contenedor">
-    <div class="contenedor">
+    <div class="container">
       <div class="logo">
-        <a href="/">Bohify</a> 
-
+        <a class="decoration" href="/">Bohify</a>
       </div>
       <div class="footer-sites">
         <nav class="link-list">
@@ -17,8 +16,6 @@
           <a class="footer-link" href="#">For Artist</a>
           <a class="footer-link" href="#">Developers</a>
           <a class="footer-link" href="#">Advertising</a>
-          <a class="footer-link" href="#">Investors</a>
-          <a class="footer-link" href="#">Vendors</a>
         </nav>
         <nav class="link-list">
           <h3>Useful Links</h3>
@@ -37,43 +34,47 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 .footer-contenedor {
   background-color: black;
-}
-.contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  box-sizing: border-box;
-  padding: 2rem;
+
+  .logo {
+    color: #fff;
+    font-size: 2rem;
+    margin: 15px auto;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .footer-link {
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    text-decoration: none;
+  }
+  .footer-link:hover {
+    color: yellowgreen;
+  }
+  h3 {
+    color: gray;
+  }
+  .footer-sites {
+    display: flex;
+    gap: 200px;
+  }
 }
 
-.logo {
-  color: #fff;
-  font-size: 2rem;
-  margin: 0 auto;
-  
-}
-.footer-link {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  gap: 30px;
-  margin: 10px;
-}
-.footer-link:hover {
-  color: yellowgreen;
-}
-h3 {
-  color: gray;
-}
-.footer-sites {
-  display: flex;
-  gap: 200px;
+@media (max-width: 800px) {
+  .footer-contenedor {
+      display: flex;
+    .container {
+      font-size: 1rem;
+    }
+    .footer-sites {
+      gap: 10px;
+    }
+    .logo {
+      display: none;
+    }
+  }
 }
 </style>

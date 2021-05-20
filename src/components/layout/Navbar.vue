@@ -1,13 +1,13 @@
 <template>
   <div class="navbar-contenedor">
-    <div class="container">
+    <div class="contenedor">
       <div class="logo">
-        <a href="/">Bohify</a>
+        <a class="decoration" href="/">Bohify</a>
       </div>
 
       <nav class="barra-de-navegacion">
-        <a class="navbar-link" href="#">Sing up</a>
-        <a class="navbar-link" href="#">Log in</a>
+        <a class="navbar-link decoration" href="#">Sing up</a>
+        <a class="navbar-link decoration" href="#">Log in</a>
       </nav>
     </div>
   </div>
@@ -21,7 +21,7 @@ export default Vue.extend({});
 <style lang="scss">
 .navbar-contenedor {
   background-color: black;
-  .container {
+  .contenedor {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -33,11 +33,11 @@ export default Vue.extend({});
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     box-sizing: border-box;
     padding: 2rem;
-    text-decoration: none;
   }
   .logo {
     color: #fff;
     font-size: 2rem;
+    
   }
   navbar-link {
     text-decoration: none;
@@ -55,7 +55,7 @@ export default Vue.extend({});
 
 @media (max-width: 800px) {
   .navbar-contenedor {
-    .container {
+    .contenedor {
       font-size: 1rem;
       .logo {
         font-size: 1.6rem;
