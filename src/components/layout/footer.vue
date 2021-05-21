@@ -37,6 +37,7 @@ export default {
 <style lang="scss">
 .footer-contenedor {
   background-color: black;
+  padding: 2rem;
 
   .logo {
     color: #fff;
@@ -65,7 +66,7 @@ export default {
 
 @media (max-width: 800px) {
   .footer-contenedor {
-      display: flex;
+    display: flex;
     .container {
       font-size: 1rem;
     }
