@@ -6,7 +6,7 @@
       </div>
 
       <nav class="barra-de-navegacion">
-        <a class="navbar-link" href="#">Sing up</a>
+        <a class="navbar-link" href="#">Sign up</a>
         <a class="navbar-link" href="#">Log in</a>
       </nav>
     </div>
