@@ -1,11 +1,28 @@
 <template>
-  <h1>hola mundo</h1>
+<div class="Playlist">
+  <PlaylistBanner {...props}/>
+  
+</div>
 </template>
 
-<script>
-export default {
-
-}
+<script lang="ts">
+import Vue from 'vue'
+import PlaylistBanner from "@/components/layout/PlaylistBanner.vue";
+export default Vue.extend({
+  props:{
+    img: String,
+    name: String,
+    author: String,
+    description: String,
+    songs:Number,
+    likes: Number,
+    time: String,
+  }
+  ,
+  components: {
+    PlaylistBanner,
+  }
+})
 </script>
 
 <style>
