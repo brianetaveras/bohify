@@ -1,28 +1,28 @@
 <template>
      <div class="Banner">
-        <img class="banner-image" src="../assets/banner.png" alt="Banner">
+         <div>
+            <h1>La Música es vida</h1>
+            <h3>Disfruta de la buena música</h3>
+         </div>
     </div>
 
 </template>
 
-<style>
-    html{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+<style lang="scss">
+   
 
-body{
-    height: 100%;
-}
 .Banner {
     width: 100%;
-}
-.banner-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+    background-image: url(../assets/banner.png);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1,h3{
+        margin: 0;
+        color: white;
+    }
 }
 
 </style>
