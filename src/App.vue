@@ -1,32 +1,41 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
+      <Navbar />
     </div>
-    <router-view/>
+    <div class="router-view"><router-view /></div>
+    <Footer />
   </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import Navbar from "@/components/layout/Navbar.vue";
+import Footer from "@/components/layout/Footer.vue";
+export default Vue.extend({
+  components: {
+    Navbar,
+    Footer,
+  },
+});
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+.router-view{
+  min-height: 100vh;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+body {
+  margin: 0;
+}
+.decoration {
+  text-decoration: none;
 }
 </style>
