@@ -1,13 +1,14 @@
 <template>
 <div class="Playlist">
-  <PlaylistBanner {...props}/>
-  
+  <!-- <PlaylistBanner v-bind: {...props} />
+  <ListOfSongs v-bind: Songs= {props.Songs}/> -->
 </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PlaylistBanner from "@/components/layout/PlaylistBanner.vue";
+// import PlaylistBanner from "@/components/layout/PlaylistBanner.vue";
+// import ListOfSongs from './layout/ListOfSongs.vue';
 export default Vue.extend({
   props:{
     img: String,
@@ -17,10 +18,12 @@ export default Vue.extend({
     songs:Number,
     likes: Number,
     time: String,
+    Songs:[]
   }
   ,
   components: {
-    PlaylistBanner,
+    // PlaylistBanner,
+    // ListOfSongs,
   }
 })
 </script>
