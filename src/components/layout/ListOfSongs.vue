@@ -57,9 +57,9 @@ export default Vue.extend({
 
 <style lang="scss">
   .ListOfMusic{
-    // background:linear-gradient(#222222 , #171717, #121212);
+    background:linear-gradient(to bottom, #222222 0% , #121212 100% );
 
-    background:gray;
+    // background:gray;
     .buttons{
       display:flex;
       align-items:center;
