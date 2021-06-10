@@ -1,0 +1,70 @@
+.player{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0.6rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #181818;
+    color: #fff;
+    font-family: sans-serif;
+
+    .music-info{
+        position: relative;
+        display: grid;
+        grid-template-areas: ' image name'
+                             ' image artist';
+        gap: 25px;
+    }
+
+    .music-image{
+        height: 56px;
+        width: 56px;
+        grid-area: image;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .music-name{
+        font-weight: bold;
+        grid-area: name;
+    }
+
+    .artist-name{
+        grid-area: artist;
+        color: lightgray;
+    }
+
+    .audio-controls{
+        
+        .audio-buttons{
+            display: flex;
+            justify-content: center;
+
+            .play-button{
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .audio-progress{
+            position: relative;
+            display: flex;
+
+            audio{
+                display: none;
+            }
+            
+            span.time-span {
+                margin: 0px 6px;
+                user-select: none;
+            }
+        }
+    }
+    progress{ 
+        cursor: pointer;
+    }
+}
