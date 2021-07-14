@@ -29,11 +29,13 @@
     }
 
     .music-name{
+        font-size: 14px;
         font-weight: bold;
         grid-area: name;
     }
 
     .artist-name{
+        font-size: 12px;
         grid-area: artist;
         color: lightgray;
     }
@@ -44,9 +46,11 @@
             display: flex;
             justify-content: center;
 
-            .play-button{
-                border-radius: 5px;
-                cursor: pointer;
+            .prev-button {
+
+                img{
+                    transform: rotate(180deg);
+                }
             }
         }
 

@@ -1,10 +1,3 @@
-const calculateCurrentValue = (e: Event, maxValue: number): number => {
-    const width = e.target.clientWidth;
-    const newPos = maxValue * (e.offsetX / width);
-
-    return newPos;
-};
-
 const convertTime = (seconds: number): string => {
     const addZeroes = (time: number) => time < 10? `0${time}` : `${time}`;
 
@@ -16,4 +9,4 @@ const convertTime = (seconds: number): string => {
     return `${currentMinute}:${currentSeconds}`;
 };
 
-export { calculateCurrentValue, convertTime }
+export { convertTime }

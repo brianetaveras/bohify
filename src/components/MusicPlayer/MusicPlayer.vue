@@ -4,12 +4,14 @@
             <img :src="music.image" alt="Music image" class="music-image">
             <div>
                 <p class="music-name">{{ music.name }}</p>
-                <span class="artist-name">{{ music.artist }}</span>
+                <p class="artist-name">{{ music.artist }}</p>
             </div>
         </div>
         <div class="audio-controls">
             <div class="audio-buttons">
-                <button class="play-button" @click="startAudio">Play</button>
+                <PlayerButton class="prev-button"><ButtonIcon :src="ArrowIcon" /></PlayerButton>
+                <PlayerButton class="play-button" @click="startAudio"><ButtonIcon :src="playIcon" class="play-icon"></PlayerButton>
+                <PlayerButton class="next-button"><ButtonIcon :src="ArrowIcon" /></PlayerButton>
             </div>
             <div class="audio-progress">
                 <audio @timeupdate="updateTime()" ref="audio" :src="music.file"></audio>
@@ -31,7 +33,11 @@
 <script lang="ts">
     import Vue from 'vue';
     import { Music } from './Music';
-    import { calculateCurrentValue, convertTime } from '@/lib/timeLibrary';
+    import { PlayerButton, ButtonIcon } from './Button';
+    import { convertTime } from '@/lib/timeLibrary';
+    import StartIcon from '@/assets/play-icon.svg';
+    import PauseIcon from '@/assets/pause-icon.svg';
+    import ArrowIcon from '@/assets/arrow-icon.svg';
 
     const music: Music = { 
         id: '1',
@@ -44,6 +50,8 @@
     export default Vue.extend({
         data(){
             return {
+                playIcon: StartIcon,
+                ArrowIcon,
                 isMouseDown: false,
                 music,
                 currentTimeText: '0',
@@ -59,9 +67,11 @@
                 this.durationText = convertTime(audio.duration);
                 if(!audio.paused){
                     audio.pause();
+                    this.$data.playIcon = StartIcon;
                     return
                 }
                 audio.play();
+                this.$data.playIcon = PauseIcon;
             },
             updateTime(){
                 const audio = this.$refs?.audio as HTMLAudioElement;
@@ -70,7 +80,7 @@
             },
             handleAudioProgressChange(event: MouseEvent){
                 const audio = this.$refs?.audio as HTMLAudioElement;
-                audio.currentTime = calculateCurrentValue(event, this.duration);
+                audio.currentTime = this.calculateCurrentValue(event, this.duration);
             },
             handleAudioDrag(event: MouseEvent){
                 this.isMouseDown && this.handleAudioProgressChange(event);
@@ -81,12 +91,22 @@
             handleVolumeProgressChange(event: MouseEvent){
                 const volume = this.$refs?.volume as HTMLProgressElement;
                 const audio = this.$refs?.audio as HTMLAudioElement;
-                const currentVolume = calculateCurrentValue(event, volume.max);
+                const currentVolume = this.calculateCurrentValue(event, volume.max);
                 
                 audio.volume = currentVolume / 100;
                 volume.value = currentVolume;
                 
+            },
+            calculateCurrentValue(e: Event, maxValue: number): number{
+                const width = e.target.clientWidth;
+                const newPos = maxValue * (e.offsetX / width);
+
+                return newPos;
             }
+        },
+        components: {
+            PlayerButton,
+            ButtonIcon
         }
     })
 </script>
